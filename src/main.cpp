@@ -7,10 +7,17 @@ int add(int i, int j)
     return i + j;
 }
 
-void dummy_caller(const std::function<bool(int *)> &func, int *val)
+// void dummy_caller(const std::function<bool(int *)> &func, int *val)
+// {
+//     std::cout << "inside dummy_caller" << std::endl;
+//     std::cout << "val " << *val << std::endl;
+//     func(val);
+// }
+
+void dummy_caller(const std::function<bool(int)> &func, int val)
 {
     std::cout << "inside dummy_caller" << std::endl;
-    std::cout << "val " << *val << std::endl;
+    std::cout << "val " << val << std::endl;
     func(val);
 }
 
